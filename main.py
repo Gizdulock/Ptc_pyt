@@ -18,7 +18,7 @@ proxy_limit = 5 # A maximális fiókok száma proxyként
 
 def generate_username_password():
     # Ez a függvény véletlenszerű felhasználónevet és jelszót generál
-    username = "poke" + str(random.randint(1000, 9999)) # A felhasználónév "poke" + négy számjegy
+    username = "gizdu" + str(random.randint(1000, 9999)) # A felhasználónév "poke" + négy számjegy
     password = "pass" + str(random.randint(1000, 9999)) # A jelszó "pass" + négy számjegy
     return username, password
 
@@ -58,7 +58,7 @@ def send_registration_request(username, password, address, proxies):
         "email": address,
         "confirm_email": address,
         "public_profile_opt_in": "False",
-        "screen_name": "",
+        "screen_name": username,
         "terms": "on"
     } # Létrehozunk egy adat szótárat a regisztrációs űrlap kitöltéséhez
     headers = {
